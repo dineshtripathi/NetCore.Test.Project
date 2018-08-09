@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  netcore.test.restapi:
+    image: ${DOCKER_REGISTRY}netcoretestrestapi
+    build:
+      context: .
+      dockerfile: NetCore.Test.RestAPI\Dockerfile
+
+  netcore.test.aspnetcore:
+    image: ${DOCKER_REGISTRY}netcoretestaspnetcore
+    build:
+      context: .
+      dockerfile: NetCore.Test.AspNetCore\Dockerfile
+
